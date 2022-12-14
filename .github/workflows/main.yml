@@ -1,4 +1,4 @@
-name: test-dev
+name: jenkins
 
 on:
   push:
