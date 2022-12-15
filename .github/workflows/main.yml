@@ -29,8 +29,8 @@ jobs:
           project-name: test-codebuild
 
       - name: S3 업로드
-        run: aws deploy push --application-name test-dev --description "test-jenkins" --s3-location s3://test-as-dev/build/build.zip --source .
+        run: aws deploy push --application-name test-dev --description "test-jenkins" --s3-location s3://test-as-dev/build/jenkins_git-main.zip	 --source .
         
       - name: Code Deploy
-        run: aws deploy create-deployment --application-name test-dev --deployment-config-name CodeDeployDefault.OneAtATime --deployment-group-name test-AS-group --s3-location bucket=test-as-dev,bundleType=zip,key=build/build.zip  
+        run: aws deploy create-deployment --application-name test-dev --deployment-config-name CodeDeployDefault.OneAtATime --deployment-group-name test-AS-group --s3-location bucket=test-as-dev,bundleType=zip,key=build/jenkins_git-main.zip  
 
