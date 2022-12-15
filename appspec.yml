@@ -6,13 +6,14 @@ files:
     overwrite: yes
 
 permissions:
-  - object: /
+  - object: /home/ubuntu/build
     pattern: "**"
     owner: ubuntu
     group: ubuntu
-
+    mode: 755 
+    
 hooks:
   ApplicationStart:
-    - location: scripts/remove-bundle-after-deploy.sh    # ApplicationStart 단계에서 해당 파일을 실행해라
+    - location: scripts/deploy.sh    # ApplicationStart 단계에서 해당 파일을 실행해라
       timeout: 60
-      runas: ubuntu
+      runas: root
