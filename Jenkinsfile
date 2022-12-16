@@ -1,18 +1,12 @@
-pipeline {
-    environment {
-        registry = 'jenkins_git'
-        dockerImage = ''
-    }
-    agent any
-    stages {
-        stage('Build Docker Image') {
-            agent any
-            steps {
-                script {
-                    dockerImage = docker.build registry + ":$BUILD_NUMBER"
-                }
-            }
-        }
-
-    }
-}
+  pipeline {
+      agent any
+      stages {
+          stage('test') {
+              steps {
+                  script {
+                      sh 'echo test'
+                  }
+              }
+          }
+      }
+  }
