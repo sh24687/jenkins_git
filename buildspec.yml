@@ -9,6 +9,7 @@ phases:
       java: openjdk11
   build:
     commands:
+      - echo Build Starting on `date`
       - chmod +x ./gradlew
       - ./gradlew build
   post_build:
@@ -26,4 +27,4 @@ artifacts:
 
 cache:
   paths:
-    - '/root/.gradle/caches/**/*'
+    - '/root/.m2/**/*'
