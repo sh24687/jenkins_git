@@ -21,8 +21,9 @@ artifacts:
   files:
     - appspec.yml
     - build/libs/*.jar
-    - before.sh
-    - deploy.sh
+    - scripts/start.sh
+    - scripts/before.sh
+    - scripts/deploy.sh
   discard-paths: yes
 
 cache:
