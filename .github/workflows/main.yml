@@ -27,6 +27,7 @@ jobs:
         uses: aws-actions/aws-codebuild-run-build@v1.0.3
         with:
           project-name: test-codebuild
+          buildspec-override: buildspec.yml
 
       - name: S3 업로드
         run: aws deploy push --application-name test-dev --description "test-jenkins" --s3-location s3://test-as-dev/build/jenkins_git-main.zip	 --source .
