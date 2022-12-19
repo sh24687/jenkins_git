@@ -25,3 +25,7 @@ dependencies {
 tasks.named('test') {
 	useJUnitPlatform()
 }
+
+bootWar {
+	archiveFileName = 'jenkins_git.war'
+}
