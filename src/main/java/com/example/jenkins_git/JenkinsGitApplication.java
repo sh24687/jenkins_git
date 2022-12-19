@@ -1,13 +1,13 @@
-package com.example.CI.CD;
+package com.example.jenkins_git;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Application {
+public class JenkinsGitApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Application.class, args);
+		SpringApplication.run(JenkinsGitApplication.class, args);
 	}
 
 }

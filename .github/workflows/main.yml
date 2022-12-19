@@ -30,7 +30,8 @@ jobs:
           buildspec-override: buildspec.yml
 
       - name: S3 업로드
-        run: aws deploy push --application-name test-dev --description "test-jenkins" --s3-location s3://test-as-dev/build/jjenkins_git.zip	 --source .
+        run: aws deploy push --application-name test-dev --description "test-jenkins" --s3-location s3://test-as-dev/build/jenkins_git.zip	 --source .
         
       - name: Code Deploy
-        run: aws deploy create-deployment --application-name test-dev --deployment-config-name CodeDeployDefault.OneAtATime --deployment-group-name test-AS-group --s3-location bucket=test-as-dev,bundleType=zip,key=build/jenkins_git.zip  
+        run: aws deploy create-deployment --application-name test-dev --deployment-config-name CodeDeployDefault.OneAtATime --deployment-group-name test-AS-group --s3-location bucket=test-as-dev,bundleType=zip,key=build/jenkins_git.zip
+
