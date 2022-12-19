@@ -10,7 +10,7 @@ pipeline {
                     IMAGE_STORAGE_CREDENTIAL = "Container Registry 접근 Credential id"
                     SSH_CONNECTION = "접속할 계정@배포할 서버 IP"
                     SSH_CONNECTION_CREDENTIAL = "SSH 서버 접근 Credential id"
-                    SLACK_CHANNEL = "#알림받을 채널"
+                    SLACK_CHANNEL = "C04FFV5KKHT"
                     SLACK_SUCCESS_COLOR = "#2C953C";
                     SLACK_FAIL_COLOR = "#FF3232";
                     // Git Commit 계정
