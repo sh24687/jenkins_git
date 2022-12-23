@@ -1,13 +1,8 @@
-# java 11 버전을 사용하겠다는 의미
-FROM	openjdk 11
+FROM ubuntu:20.04
 
-# 해당 이미지를 만든 사용자의 정보
-MAINTAINER sh <sh.lee2@chabot.co.kr>
-
-# 도커 컨테이너 호스트와 공유할 디렉터리 지정
-VOLUME /build/server
-
-# 도커 이미지를 실행할시 실행될 스크립트
-COPY ./start.sh /usr/local/bin
-RUN ln -s /usr/local/bin/start.sh /start.sh
-CMD ["start.sh"]
+RUN rm -rf /var/lib/apt/lists/* # apt-get update 후, python3 , pip등을 설치
+RUN apt-get update \
+  && apt-get install -y python3-pip python3-dev \
+  && cd /usr/local/bin \
+  && ln -s /usr/bin/python3 python \
+  && pip3 install --upgrade pip
