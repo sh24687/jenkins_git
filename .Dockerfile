@@ -1,5 +1,5 @@
 # java 11 버전을 사용하겠다는 의미
-FROM	openjdk 11
+FROM	openjdk:11
 
 # 해당 이미지를 만든 사용자의 정보
 MAINTAINER sh <sh.lee2@chabot.co.kr>
